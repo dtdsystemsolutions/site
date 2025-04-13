@@ -935,8 +935,8 @@ width: 100px;
 ********* Footer ******
 ************************/
 #footer {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 10px;
+  padding-bottom: 15px;
   color: #fff;
   background: #141414;
 }
