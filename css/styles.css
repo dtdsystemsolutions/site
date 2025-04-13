@@ -653,7 +653,7 @@ color: #4F4F4F;
 .download-now {
   position: relative;
   color: #fff;
-  padding: 100px 0 0;
+  padding: 40px 0 0;
 }
 .download-now:before {
   content: '';
