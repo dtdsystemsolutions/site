@@ -603,55 +603,56 @@ Vivamus eget finibus.
             <div class="container contact-info">
 <form action="https://formsubmit.co/dtdsystemsolutions@gmail.com" method="POST">
   <input type="hidden" name="_captcha" value="false">
-    <div class="row">
-      <!-- Name -->
-      <div class="col-md-6 mb-3">
-        <label for="name">Name*</label>
-        <input type="text" class="form-control" id="name" placeholder="First and Last Name" required>
-      </div>
-
-      <!-- Contact Number -->
-      <div class="col-md-6 mb-3">
-        <label for="contact">Contact Number*</label>
-        <input type="tel" class="form-control" id="contact" placeholder="e.g. 09171234567" required>
-      </div>
-
-      <!-- Email -->
-      <div class="col-md-6 mb-3">
-        <label for="email">Email*</label>
-        <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
-      </div>
-
-      <!-- Company Name -->
-      <div class="col-md-6 mb-3">
-        <label for="company">Company Name*</label>
-        <input type="text" class="form-control" id="company" required>
-      </div>
-
-      <!-- Software Type -->
-      <div class="col-md-12 mb-3">
-        <label for="softwareType">Software Type*</label>
-        <select class="form-control" id="softwareType" required>
-          <option disabled selected value="">-- Select Software --</option>
-          <option>Barcode Tracking System</option>
-          <option>Inventory Management System</option>
-          <option>POS System</option>
-          <!-- Add more as needed -->
-        </select>
-      </div>
-
-      <!-- Short Details -->
-      <div class="col-md-12 mb-4">
-        <label for="details">Short details of the system you're inquiring about</label>
-        <textarea class="form-control" id="details" rows="4" placeholder="Provide a brief description..."></textarea>
-      </div>
-
-      <!-- Submit Button -->
-      <div class="col-md-12 text-center">
-        <button type="submit" class="btn btn-primary px-5">Submit Request</button>
-      </div>
+  
+  <div class="row">
+    <!-- Name -->
+    <div class="col-md-6 mb-3">
+      <label for="name">Name*</label>
+      <input type="text" class="form-control" id="name" name="Name" placeholder="First and Last Name" required>
     </div>
-  </form>
+
+    <!-- Contact Number -->
+    <div class="col-md-6 mb-3">
+      <label for="contact">Contact Number*</label>
+      <input type="tel" class="form-control" id="contact" name="Contact Number" placeholder="e.g. 09171234567" required>
+    </div>
+
+    <!-- Email -->
+    <div class="col-md-6 mb-3">
+      <label for="email">Email*</label>
+      <input type="email" class="form-control" id="email" name="Email" placeholder="you@example.com" required>
+    </div>
+
+    <!-- Company Name -->
+    <div class="col-md-6 mb-3">
+      <label for="company">Company Name*</label>
+      <input type="text" class="form-control" id="company" name="Company Name" required>
+    </div>
+
+    <!-- Software Type -->
+    <div class="col-md-12 mb-3">
+      <label for="softwareType">Software Type*</label>
+      <select class="form-control" id="softwareType" name="Software Type" required>
+        <option disabled selected value="">-- Select Software --</option>
+        <option>Barcode Tracking System</option>
+        <option>Inventory Management System</option>
+        <option>POS System</option>
+        <!-- Add more as needed -->
+      </select>
+    </div>
+
+    <!-- Short Details -->
+    <div class="col-md-12 mb-4">
+      <label for="details">Short details of the system you're inquiring about</label>
+      <textarea class="form-control" id="details" name="Details" rows="4" placeholder="Provide a brief description..."></textarea>
+    </div>
+
+    <!-- Submit Button -->
+    <div class="col-md-12 text-center">
+      <button type="submit" class="btn btn-primary px-5">Submit Request</button>
+    </div>
+  </div>
+</form>
 <!--  
                 <div class="row">
 				  <div class="col-sm-4 col-md-4">
