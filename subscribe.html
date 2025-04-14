@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Subscribe Now</title>
+  <style>
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      position: relative;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #111111;
+      background-image: url('../image/banner/warehouse.jpeg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: white;
+    }
+
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.900);
+      /* 0.5 = 50% dark */
+      z-index: -1;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: #18181886;
+      padding: 25px;
+      border-radius: 10px;
+    }
+
+    h2 {
+      color: red;
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+      color: #c9c9c9;
+    }
+
+    input {
+      width: 97%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 6px;
+      border: none;
+    }
+
+    .confirm-button {
+      background-color: red;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 15px;
+      width: 100%;
+    }
+
+    .confirm-button:hover {
+      background-color: #b30000;
+    }
+
+    .form-label {
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .form-label .label-text {
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .form-label .required {
+      color: red;
+      margin-left: 2px;
+    }
+
+    .note {
+      font-weight: normal;
+      font-size: 0.85em;
+      color: gray;
+    }
+
+    .plan-summary {
+      background-color: #3a3a3a;
+      padding: 10px;
+      border-radius: 6px;
+      margin-bottom: 5px;
+    }
+
+    .required {
+      color: red;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin-top: 5px;
+    }
+
+    ul li {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <br>
+  <div class="container">
+    <div class="plan-summary" id="plan-summary">
+      Loading plan details...
+    </div>
+
+    <form id="subscribe-form">
+      <label class="form-label">Full Name <span class="required">*</span></label>
+      <input type="text" required name="fullname" pattern="[A-Za-z\s]+" title="Only letters and spaces allowed" />
+
+      <label for="mobileNumber" class="form-label">
+        <span class="label-text">
+          Contact Number <span class="required">*</span>
+        </span>
+      </label>
+      <span class="note">The license key will be sent to this number.</span>
+      <input type="tel" id="mobileNumber" required name="contact" pattern="^09\d{9}$"
+        title="Must be 11 digits starting with 09 (e.g., 09123456789)" placeholder="09XXXXXXXXX" />
+
+      <label class="form-label">Email <span class="required">*</span></label>
+      <input type="email" required name="email" />
+
+      <label class="form-label">Company Name <span class="required">*</span></label>
+      <input type="text" required name="company" />
+
+
+      <div style="display: flex; gap: 15px; margin: 10px 0; flex-wrap: wrap;">
+        <h3 style="margin-top: 15px;">Available Payment Options:</h3>
+        <div style="text-align: center;">
+          <img src="image/payments/gcash.png" alt="GCash" style="height: 25px; margin-top: 13px;"><br>
+        </div>
+        <div style="text-align: center;">
+          <img src="image/payments/maya.svg" alt="PayMaya" style="height: 20px; margin-top: 15px;"><br>
+        </div>
+        <div style="text-align: center;">
+          <img src="image/payments/grabpay.webp" alt="GrabPay" style="height: 20px; margin-top: 15px;"><br>
+        </div>
+        <div style="text-align: center;">
+          <img src="image/payments/shopeepay.png" alt="ShopeePay" style="height: 20px; margin-top: 15px;"><br>
+        </div>
+      </div>
+
+      <input type="hidden" id="amount" name="amount" value="0">
+      <input type="hidden" id="token-value" name="token" value="2o4bnwVcJGhTK61lyFiwS1sPV">
+
+      <button type="button" class="confirm-button" id="confirm-button">PAY NOW</button>
+    </form>
+  </div>
+
+  <script src="js/klcis-script.js"></script>
+</body>
+
+</html>

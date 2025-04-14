@@ -1,0 +1,316 @@
+/* === FONT FACE === */
+@font-face {
+    font-family: 'FontAwesomeCustom';
+    src: url('../fonts/fontawesome-webfont.woff') format('woff'),
+        url('../fonts/fontawesome-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GlyphiconsCustom';
+    src: url('../fonts/glyphicons-halflings-regular.woff') format('woff'),
+        url('../fonts/glyphicons-halflings-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* === GLOBAL RESET & BASE === */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+body::before {
+    content: "";
+    display: block;
+    height: 60px;
+    /* Prevents section overlap with fixed nav */
+}
+
+/* === NAVIGATION === */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #141414;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo {
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2px;
+}
+
+.nav-links a {
+    font-family: 'Segoe UI';
+    font-size: 13px;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #a00000;
+}
+
+.nav-links a.active {
+    color: #ff0000;
+}
+
+/* === HAMBURGER === */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+}
+
+.hamburger.hide {
+    display: none;
+}
+
+/* === RESPONSIVE NAVIGATION === */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        background-color: #333;
+    }
+
+    .nav-links a {
+        padding: 15px;
+        border-top: 1px solid #444;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+/* === SECTIONS === */
+section {
+    padding: 100px 10%;
+    height: 100vh;
+}
+
+#home {
+    background-image: url('../image/banner/bg1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    padding: 0px 75px 0px 75px;
+    color: rgb(255, 255, 255);
+}
+
+.home-content {
+    max-width: 450px;
+}
+
+#products {
+    position: relative;
+    background-image: url('../image/banner/warehouse.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    padding: 30px 80px 30x 80px;
+    height: auto;
+    min-height: auto;
+    flex-grow: 0;
+
+    color: white;
+    z-index: 1;
+}
+
+#products::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.900); /* 0.5 = 50% dark */
+    z-index: -1;
+}
+
+#services {
+    background-color: rgb(185, 185, 185);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    padding: 30px 80px 30x 80px;
+    height: auto;
+    min-height: auto;
+    flex-grow: 0;
+}
+
+.services-content {
+    max-width: 450px;
+}
+
+#whyus {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background: white;
+    padding: 30px 80px 30x 80px;
+    min-height: 100vh;
+    height: auto;
+}
+
+.whyus-content {
+    max-width: 450px;
+}
+
+#pricing {
+    background-image: url('../image/banner/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    padding: 30px 80px 30x 80px;
+    height: auto;
+    min-height: auto;
+    flex-grow: 0;
+
+    color: white;
+    z-index: 1;
+}
+
+.card .best-for-note {
+    font-style: italic;
+    font-weight: normal !important;
+    font-size: 14px !important;
+    color: #b8b8b8 !important;
+    padding: 10px 15px;
+    margin-top: 10%;
+}
+
+#pricing .card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: stretch;
+    height: auto;
+    text-align: center;
+}
+
+#pricing .card {
+    background-color: #2a2a2a;
+    color: white;
+    padding: 20px 30px 25px 30px;
+    border-radius: 10px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 300px; 
+
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+#pricing .card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#pricing .card p {
+    font-size: 32px;
+    color: red;
+    font-weight: bold;
+}
+
+#pricing .card ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 5px;
+    text-align: left;
+    flex-grow: 1;
+}
+
+.avail-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 5px;
+    margin-left: 28px;
+    margin-right: 28px;
+}
+
+.avail-button a {
+    text-decoration: none; /* Remove the underline */
+    color: white; /* Ensure the link text is white */
+    display: inline-block; /* Make it behave like a button */
+}
+
+.avail-button:hover {
+    background-color: #b30000;
+}
+
+#demo {
+    background-color: white;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    padding: 30px 80px 30px 80px;
+    height: auto;
+    min-height: auto;
+    flex-grow: 0;
+}
