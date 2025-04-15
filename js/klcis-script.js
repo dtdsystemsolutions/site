@@ -98,6 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Prepare form data for submission
     const formData = new FormData(form);
+    formData.append('_subject', `Potential Subscription for ${plans[selectedPlanKey].name}`);
 
     // Submit form data via fetch
     fetch("https://formsubmit.co/ajax/dtdsystemsolutions@gmail.com", {
