@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     lifetime: {
       name: "🏆 Lifetime Plan",
-      price: 180000,
+      price: 5,
       billing: "One-time",
       features: ["✔ Full feature access",
         "✔ Lifetime access",

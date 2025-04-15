@@ -250,10 +250,11 @@ section {
     color: white;
     padding: 20px 30px 25px 30px;
     border-radius: 10px;
-    width: 300px;
+    width: 100%;
+    max-width: 350px; /* <-- Set your desired max width here */
     display: flex;
     flex-direction: column;
-    flex: 1 1 300px; 
+    flex: 1 1 300px;
 
     justify-content: space-between;
     box-sizing: border-box;
